@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Note] MySQL 07. Table Structure"
+title: "[Lecture Note] MySQL 06. Table Structure"
 toc: true
 use_math: true
 categories:
