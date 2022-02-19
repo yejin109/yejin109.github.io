@@ -74,3 +74,4 @@ SELECT CONCAT('1997년과 1979년의 나이차 ==> ', (@age1979-@age1989));
 ```
 SHOW CREATE FUNCTION getAgeFunc;
 ```
+
