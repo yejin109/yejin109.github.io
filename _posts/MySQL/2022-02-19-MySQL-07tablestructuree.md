@@ -191,8 +191,6 @@ SET foreign_key_checks = 0;
 SET foreign_key_checks = 1;
 ```
 
-
-
 - 유형 2 : INSERT 시 에러
 
 에러가 있어서 중간에 멈추는 경우엔 IGNORE란 예약어를 넣어 넘어가게 합니다.
@@ -230,3 +228,18 @@ SET foreign_key_checks = 1;
 테이블을 지울 땐 FK를 사용하는 테이블을 먼저 지워야합니다. 그렇지 않으면 에러가 발생하게 되고
 
 방법 1 : ON DELETE CASCADE 사용하여 같이 삭제
+
+방법 2 : 연결된 구조를 보고 FK 먼저 지우고 그다음에 PK 지우기
+
+먼저 table_named의 제약조건들을 봅니다. 
+```
+SELECT table_name, constraint_name
+    FROM information_schema.referential_constraints
+    WHERE constraint_schema = table_name;
+```
+
+그 다음 FK가 있는 테이블에서 FK를 지우고 나서 PK를 지웁니다.
+```
+ALTER TABLE fk_table_name DROP FOREIGN KEY fk_name;
+ALTER TABLE pk_table_name DROP PRIMARY KEY;
+```
