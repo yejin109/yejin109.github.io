@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Note] MySQL 10.Cursor"
+title: "[Lecture Note] MySQL 10. Triger"
 toc: true
 use_math: true
 categories:
