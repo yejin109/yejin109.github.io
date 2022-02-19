@@ -8,9 +8,9 @@ tags:
   - [MySQL]
 ---
 
+SQL에서 프로그래밍하여 사용하는 것으로 일종의 함수로 생각하는 방법인 Stored Procedure에 대한 설명입니다.
 
-# 생성할 때 
-SQL에서 프로그래밍하여 사용하는 것으로 일종의 함수로 생각할 수 있다고 생각합니다.
+# 생성할
 
 다음과 같은 방식으로 생성합니다. 
 ```
@@ -216,4 +216,15 @@ PREPARE로 쿼리만 준비해놓고 뒤에 EXECURE가 실행되면 그 때 실�
 PREPARE myQuery FROM 'SELECT * FROM usertbl WHERE userID = "EJW"';
 EXECUTE myQuery;
 DEALLOCATE PREPARE myQuery;
+```
+
+이런 방식이 도움되는 이유로, 프로시저에 값을 넣어주어야하는 경우 먼저 프로시저를 선언해놓고 변수값이 정해지면 넣어서 실행하도록 할 수 있습니다.
+이 때 변수가 들어가는 자리에 ?를 넣어서 사용합니다.
+
+```
+SET @myVar1 =3;
+PREPARE myQuery
+	FROM 'SELECT Name, height FROM usertbl ORDER BY height LIMIT ?';
+EXECUTE myQuery USING @myVar1;
+
 ```
