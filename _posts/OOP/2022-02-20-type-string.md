@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Note] 객체지향 프로그래밍 - 자료형"
+title: "[Lecture Note] 객체지향 프로그래밍 - 자료형 String"
 toc: true
 use_math: true
 categories:
@@ -14,6 +14,8 @@ tags:
 # String
 
 기존에 알고 있던 char 타입은 문자를 나타낸 것이라면 문자열(String)은 이런 문자들이 나열된 것으로 생각할 수 있습니다. 
+
+중요한 것은 따옴표는 char를 쌍따옴표는 String의 리터럴이 됩니다.
 
 ## Declarartion
 
@@ -92,11 +94,11 @@ String ct = "a";
 
 그 외의 method는 다음과 같습니다.
 
-- indexOf : argwhere처럼 문자열이 시작하는 인덱스를 알려줍니다.
-- contains : pd.Series.str.contains처럼 포함 여부를 bool형으로 리턴합니다.
-- charAt : indexOf와 비슷하지만 파이썬의 String indexing처럼 특정한 하나의 문자의 위치를 입력하면 문자를 알려주게 됩니다
-- replaceAll : pd.Series.str.replace처럼 주어진 문자 패턴을 다른 값으로 바꿔줍니다.
-- substring : 파이썬의 String indexing처럼 주어진 인덱스 범위의 문자열을 반환합니다.
+- indexOf : argwhere처럼 문자열(input)이 시작하는 인덱스(output)를 알려줍니다.
+- contains : pd.Series.str.contains처럼 특정 문자열(input)의 포함 여부를 bool형(output)으로 리턴합니다.
+- charAt : indexOf와 비슷하지만 파이썬의 String indexing처럼 특정한 하나의 문자의 위치(input)의 문자(output, **char**)를 알려주게 됩니다
+- replaceAll : pd.Series.str.replace처럼 주어진 문자 패턴(input1)을 다른 값(input2)으로 바꿔(output)줍니다.
+- substring : 파이썬의 String indexing처럼 주어진 인덱스 범위(input)의 문자열(output)을 반환합니다.
 - split : pd.Series.str.split과 비슷한 작업입니다.
 - toUpperCase / toLowerCase
 
@@ -133,3 +135,47 @@ System.out.printf("I eat %d apples.", 3);
 - %와 코드 사이에 숫자를 넣게 된다면 공백을 의미 ex. %3s => "   "
 - 소숫점을 제한할 때엔 %.(원하는길이)f로 표시 ex. %.3f => 3.14729 -> 3.147
 
+
+# String Buffer & String bulider
+
+참고한 자료는 [링크](https://ifuwanna.tistory.com/221)에서 확인할 수 있습니다.
+
+문자열을 파이썬의 list 조작할 때처럼 사용하는 method를 가지는 클래스입니다.
+
+## append
+
+String 타입의 경우 + 로 추가하는 것을 append method로 구현가능합니다.
+
+```
+StringBuffer sb = new StringBuffer();  
+sb.append("hello");
+sb.append(" ");
+sb.append("jump to java");
+String result = sb.toString();
+
+String result = "";
+result += "hello";
+result += " ";
+result += "jump to java";
+```
+
+StringBuffer의 append의 경우 하나의 객체에서 계속 수정하는 방식이며
+
+String의 +의 경우 계속 객체를 생성하는 방식입니다.
+
+
+## 그 외 method
+
+- insert : 정해진 위치(input)에 주어진 문자열 추가(output)
+- substring : String과 동일
+
+
+||String|StringBuffer|StringBuilder|
+|:---:|:---:|:---:|:---:|
+|저장공간|String (Constant) Pool | Heap | Heap|
+|수정여부|새로운 객체 생성|하나의 객체 수정|하나의 객체 수정|
+|mutability|immutable|mutable|mutable|
+|성능|비교적 가벼움|비교적 무겁고 느림|빠름|
+|동기화|가능|가능|불가능|
+|thread-safe|Y|Y|N|
+|예시|변화적고 멀티쓰레드|변화 많고 멀티 쓰레드|변화 많고 단일 쓰레드|
