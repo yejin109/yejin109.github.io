@@ -8,6 +8,8 @@ tags:
   - [MySQL]
 ---
 
+[이것이 MySQL이다 강의](https://www.youtube.com/watch?v=xKYeJxBTt2E&list=PLVsNizTWUw7Hox7NMhenT-bulldCp9HP9)를 참고하여 정리한 글임을 밝힙니다.
+
 # 조건문 IF / IFNULL / NULLIF / CASE WHEN ESLE END
 
 일부만 가져온 것이고 이 외의 예시는  06. stored procedure에서 함께 나타낼 것입니다.

@@ -9,6 +9,9 @@ tags:
   - [MySQL]
 ---
 
+[이것이 MySQL이다 강의](https://www.youtube.com/watch?v=xKYeJxBTt2E&list=PLVsNizTWUw7Hox7NMhenT-bulldCp9HP9)를 참고하여 정리한 글임을 밝힙니다.
+
+
 # Introduction 
 
 어떤 글 내에 검색을 진행할 때 WHERE문을 사용한다고 하면 적절히 수행되지 않기도 합니다.<br> 

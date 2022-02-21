@@ -8,6 +8,9 @@ tags:
   - [MySQL]
 ---
 
+[이것이 MySQL이다 강의](https://www.youtube.com/watch?v=xKYeJxBTt2E&list=PLVsNizTWUw7Hox7NMhenT-bulldCp9HP9)를 참고하여 정리한 글임을 밝힙니다.
+
+
 stored procedure 내에서 사용하는 cursor에 대한 내용입니다.
 
 커서의 핵심은 파일을 열어서 한 행식 값을 처리하는 것을 말하고 이 때 '파일 포인터'는 자동으로 다음 줄을 가리켜 진행됩니다.

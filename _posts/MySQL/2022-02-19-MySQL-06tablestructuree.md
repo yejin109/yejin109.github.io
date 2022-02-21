@@ -8,6 +8,9 @@ tags:
   - [MySQL]
 ---
 
+[이것이 MySQL이다 강의](https://www.youtube.com/watch?v=xKYeJxBTt2E&list=PLVsNizTWUw7Hox7NMhenT-bulldCp9HP9)를 참고하여 정리한 글임을 밝힙니다.
+
+
 # 데이터 관리
 
 ## 테이블 단위

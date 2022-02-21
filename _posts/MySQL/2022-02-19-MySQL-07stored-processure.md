@@ -8,6 +8,9 @@ tags:
   - [MySQL]
 ---
 
+[이것이 MySQL이다 강의](https://www.youtube.com/watch?v=xKYeJxBTt2E&list=PLVsNizTWUw7Hox7NMhenT-bulldCp9HP9)를 참고하여 정리한 글임을 밝힙니다.
+
+
 SQL에서 프로그래밍하여 사용하는 것으로 일종의 함수, 쿼리문의 집합으로 생각하는 방법인 Stored Procedure에 대한 설명입니다.
 
 # 생성방식

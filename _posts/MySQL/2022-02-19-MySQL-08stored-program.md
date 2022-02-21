@@ -8,6 +8,9 @@ tags:
   - [MySQL]
 ---
 
+[이것이 MySQL이다 강의](https://www.youtube.com/watch?v=xKYeJxBTt2E&list=PLVsNizTWUw7Hox7NMhenT-bulldCp9HP9)를 참고하여 정리한 글임을 밝힙니다.
+
+
 # 기본 형태 
 
 내장함수만으론 부족한 것을 채워주고 사용법은 stroed procedure와 조금 다릅니다.

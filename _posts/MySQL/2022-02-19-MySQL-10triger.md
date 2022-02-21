@@ -8,6 +8,9 @@ tags:
   - [MySQL]
 ---
 
+[이것이 MySQL이다 강의](https://www.youtube.com/watch?v=xKYeJxBTt2E&list=PLVsNizTWUw7Hox7NMhenT-bulldCp9HP9)를 참고하여 정리한 글임을 밝힙니다.
+
+
 특정 테이블에 할당되어 DML문(**INSERT, UPDATE, DELETE**같은 작업들이며 **TRUNCATE의 경우 DDL문**이라서 트리거가 되지 않습니다)이 발생되면 자동으로 실행되는 프로그래밍이라고 생각하면 될 것 같습니다.
 
 트리거의 특성상 강제로 사용할 수 없고 이벤트가 발생해야 하며 파라미터도받을 수 없습니다.
