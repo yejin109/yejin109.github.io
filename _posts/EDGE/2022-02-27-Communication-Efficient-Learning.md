@@ -5,9 +5,9 @@ toc_sticky: true
 toc_lable: "Main Contents"
 use_math: true
 categories:
-  - Recommendation-System
+  - Edge Learning
 tags:
-  - []
+  - [Distributed, Federated]
 ---
 
 "Communication Efficient Learning"이란 논문에 대한 리뷰입니다.
