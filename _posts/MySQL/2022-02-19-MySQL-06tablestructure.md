@@ -68,11 +68,11 @@ ALTER TABLE usertbl
 
 - [FOREIGN KEY](##foreign-key)
 
-- UNIQUE
+- [UNIQUE](#unique)
 
-- CHECK
+- [CHECK](#check)
 
-- DEFAULT
+- [DEFAULT](#default-%EC%A0%95%EC%9D%98)
 
 - NULL(NOT NULL)
 
@@ -172,6 +172,87 @@ ALTER TABLE buytbl
         ON DELETE CASCADE;
 ```
 
+## UNIQUE
+
+PK와 유사하지만 NULL값을 허용한다는 차이점이 있습니다. 
+
+- 지정 방식
+
+```
+CREATE TABLE usertbl 
+( userID  CHAR(8) NOT NULL PRIMARY KEY, 
+  -- 여기서
+  email   CHAR(30) NULL  UNIQUE
+);
+```
+혹은
+```
+DROP TABLE IF EXISTS usertbl;
+CREATE TABLE usertbl 
+( userID  CHAR(8) NOT NULL PRIMARY KEY,
+...
+  email   CHAR(30) NULL ,  
+  -- CONSTRAINT로 추가하고 이름은 주로 AK를 붙인다고 합니다.
+  CONSTRAINT AK_email  UNIQUE (email)
+);
+
+```
+
+## CHECK
+
+입력시 데이터 값을 검사하는 역할을 합니다. 
+- 지정 방식
+
+```
+CREATE TABLE usertbl 
+( userID  CHAR(8) PRIMARY KEY,
+...
+  -- WHERE에 사용되는 것처럼 사용하면 되는 것 같습니다 .
+  birthYear  INT CHECK  (birthYear >= 1900 AND birthYear <= 2023),
+);
+```
+
+ALTER TABLE로 지정하는 방식
+```
+ALTER TABLE usertbl
+	ADD CONSTRAINT CK_mobile1
+	CHECK  (mobile1 IN ('010','011','016','017','018','019')) ;
+```
+
+## DEFAULT 정의
+
+값을 지정하지 않았을 때 자동으로 입력하는 방법입니다.
+
+- 지정방식
+
+```
+CREATE TABLE usertbl 
+( userID  	CHAR(8) NOT NULL PRIMARY KEY,  
+...
+  birthYear	INT NOT NULL DEFAULT -1,
+  addr	  	CHAR(2) NOT NULL DEFAULT '서울',
+  height	SMALLINT NULL DEFAULT 170, 
+);
+```
+
+ALTER TABLE의 ALTER COLUMN으로 지정하는 방식
+```
+ALTER TABLE usertbl
+	ALTER COLUMN birthYear SET DEFAULT -1;
+ALTER TABLE usertbl
+	ALTER COLUMN addr SET DEFAULT '서울';
+ALTER TABLE usertbl
+	ALTER COLUMN height SET DEFAULT 170;
+```
+
+- DEFAULT 활용방식
+
+```
+-- default임을 알려주는 방식
+INSERT INTO usertbl VALUES ('LHL', '이혜리', default, default, '011', '1234567', default, '2023.12.12');
+-- 알아서 default 사용하는 방식
+INSERT INTO usertbl(userID, name) VALUES('KAY', '김아영');
+```
 
 # 에러 유형
 
@@ -222,7 +303,7 @@ INSERT INTO membertbl VALUES('DJM', '동짜몽', '일본')
 SET foreign_key_checks = 0;
 UPDATE usertbl SET userID = 'VVK' WHERE userID='BBK';
 SET foreign_key_checks = 1;
-~~~
+```
 
 이런 것들을 방지하려고 ON UPDATE CASCADE를 사용하는 것입니다!
 
@@ -245,4 +326,28 @@ SELECT table_name, constraint_name
 ```
 ALTER TABLE fk_table_name DROP FOREIGN KEY fk_name;
 ALTER TABLE pk_table_name DROP PRIMARY KEY;
+```
+
+# 그 외
+## 테이블 압축
+
+- 선언 방식
+
+ROW_FORMAT에 COMPRESSED를 추가해서 데이터를 **내부적**으로 압축해서 관리하게 됩니다.<br>
+SELECT할 때에는 겉으론 똑같지만 내부적으로 압축과정이 있어 속도가 느려지기도 합니다.
+
+```
+CREATE TABLE compressTBL( emp_no int , first_name varchar(14))
+	ROW_FORMAT=COMPRESSED ;
+```
+
+## 임시 테이블
+현재 세션(접속자)에만 적용되며 직접 지우거나 Workbench가 종료 혹은 서버가 재부팅되면 사라지게 됩니다. 
+
+이렇게 사용하는 이유로 작업 중간에 잠깐 쓰는 테이블과 중요 테이블을 구분하기 위함입니다.
+
+- 지정 방식
+CREATE TEMPORARY TABLE로 선언하게 됩니다. 이 때 사용된 이름이 기존 테이블과 같다면 기존 테이블은 사용되지 않는다고 합니다. 
+```
+CREATE TEMPORARY TABLE  IF NOT EXISTS employees (id INT, name CHAR(5));
 ```
