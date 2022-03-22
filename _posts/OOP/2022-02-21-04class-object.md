@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Note] 객체지향 프로그래밍 - 02 클래스와 객체 1 (4)"
+title: "[Lecture Note] 객체지향 프로그래밍 - 04 클래스와 객체 1 (4)"
 toc: true
 use_math: true
 categories:

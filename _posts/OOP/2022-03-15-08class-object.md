@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Note] 객체지향 프로그래밍 - 02 클래스와 객체 2 (4) - singleton 패턴"
+title: "[Lecture Note] 객체지향 프로그래밍 - 08 클래스와 객체 2 (4) - singleton 패턴"
 toc: true
 use_math: true
 categories:
