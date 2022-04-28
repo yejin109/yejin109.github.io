@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Note] 객체지향 프로그래밍 - 11 ArrayList class"
+title: "[Lecture Note] 객체지향 프로그래밍 - 12 ArrayList class"
 toc: true
 use_math: true
 categories:
