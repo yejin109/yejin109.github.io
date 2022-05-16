@@ -16,7 +16,7 @@ tags:
 
 아래의 그림에서 볼 수 있듯이 주소의 크기는 4이든 8바이트이든 가능하지만, 중요한 것은 나중에 생성해야 하는 것이다.
 
-![제목](/assets/images/oop/객체배열1.png){: width="50%" height="40%"}{: .align-center}
+![제목](/assets/images/oop/arraylist1.png){: width="50%" height="40%"}{: .align-center}
 
 # 배열 복사하기
 
@@ -42,11 +42,11 @@ System.arraycopy(src, srcPos, dest, destPos, length);
 ### 얕은 복사
 단순히 복사할 때엔 객체가 복사된 것이 아니라 **주소가 복사**된 것이다.
 
-![제목](/assets/images/oop/객체배열2.png){: width="50%" height="40%"}{: .align-center}
+![제목](/assets/images/oop/arraylist2.png){: width="50%" height="40%"}{: .align-center}
 
 ### 깊은 복사
 아래와 같이다시 생성해야 한다.
-![제목](/assets/images/oop/객체배열3.png){: width="50%" height="40%"}{: .align-center}
+![제목](/assets/images/oop/arraylist3.png){: width="50%" height="40%"}{: .align-center}
 
 # enhanced for loop
 
