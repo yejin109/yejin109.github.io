@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Note] 객체지향 프로그래밍 - 19, 20 인터페이스 선언과 구현하기(1)"
+title: "[Lecture Note] 객체지향 프로그래밍 - 18 인터페이스 선언과 구현하기(1), (2)"
 toc: true
 use_math: true
 categories:
