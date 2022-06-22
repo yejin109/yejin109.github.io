@@ -1,67 +1,88 @@
----
-layout: default
----
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
-{% endif %}
+<!-- -&#45;&#45;-->
+<!--layout: default-->
+<!-- -&#45;&#45;-->
+<!--{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}-->
+<!--  {% include page__hero.html %}-->
+<!--{% elsif page.header.video.id and page.header.video.provider %}-->
+<!--  {% include page__hero_video.html %}-->
+<!--{% endif %}-->
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
+<!--{% if page.url != "/" and site.breadcrumbs %}-->
+<!--  {% unless paginator %}-->
+<!--    {% include breadcrumbs.html %}-->
+<!--  {% endunless %}-->
+<!--{% endif %}-->
 
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-  {% include sidebar.html %}
-<body>
+<!--&lt;!&ndash;-->
+<!--	Forty by HTML5 UP-->
+<!--	html5up.net | @ajlkn-->
+<!--	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)-->
+<!--&ndash;&gt;-->
+<!--<html>-->
+<!--  {% include sidebar.html %}-->
+<!--<body>-->
 
     <!-- Banner -->
-    <section id="banner" class="major">
-        <div class="inner">
-            <header class="major">
-                <h1>{{ page.landing-title }}</h1>
-            </header>
-            <div class="content">
-                <p style="text-transform: uppercase;">{{ site.description }}</p>
-            </div>
-        </div>
-    </section>
+<!--    <section id="banner" class="major">-->
+<!--        <div class="inner">-->
+<!--            <header class="major">-->
+<!--                <h1>{{ page.landing-title }}</h1>-->
+<!--            </header>-->
+<!--            <div class="content">-->
+<!--                <p style="text-transform: uppercase;">{{ site.description }}</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
-    <!-- Main -->
-    <div id="main">
+<!--    &lt;!&ndash; Main &ndash;&gt;-->
+<!--    <div id="main">-->
 
-        <section id="contents">
-            <div class="inner">
-                <header class="major">
-                    <h2>관심 분야</h2>
-                </header>
-                <p>Deep Learning / Distributed Learning / </p>
-                <ul class="actions">
-                    <li><a href="landing.html" class="button next">Get Started</a></li>
-                </ul>
-            </div>
-        </section>
+<!--        <section id="contents">-->
+<!--            <div class="inner">-->
+<!--                <header class="major">-->
+<!--                    <h2>관심 분야</h2>-->
+<!--                </header>-->
+<!--                <p>Deep Learning / Distributed Learning / </p>-->
+<!--                <ul class="actions">-->
+<!--                    <li><a href="landing.html" class="button next">Get Started</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </section>-->
 
-    </div>
+<!--    </div>-->
 
 
-</body>
+<!--</body>-->
 
-</html>
+<!--</html>-->
 
-<!--
+
 ---
 layout: archive
 ---
 
 {{ content }}
+
+
+<section id="banner" class="major">
+    <div class="inner">
+        <header class="major">
+            <h1>Yejin Kim</h1>
+        </header>
+        <div class="content">
+            <p style="text-transform: uppercase;">self-motivated & passionate</p>
+        </div>
+    </div>
+</section>
+
+<section id="contents">
+    <div class="inner">
+        <header class="major">
+            <h2>관심 분야</h2>
+        </header>
+        <h3>Deep Learning / Distributed Learning </h3>
+    </div>
+</section>
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
@@ -71,12 +92,11 @@ layout: archive
   {% assign posts = site.posts %}
 {% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div>
+<!--{% assign entries_layout = page.entries_layout | default: 'list' %}-->
+<!--<div class="entries-{{ entries_layout }}">-->
+<!--  {% for post in posts %}-->
+<!--    {% include archive-single.html type=entries_layout %}-->
+<!--  {% endfor %}-->
+<!--</div>-->
 
 {% include paginator.html %}
--->
