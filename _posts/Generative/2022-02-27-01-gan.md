@@ -5,7 +5,7 @@ toc_sticky: true
 toc_lable: "Main Contents"
 use_math: true
 categories:
-  - Generative Model
+  - Generative
 tags:
   - []
 ---
