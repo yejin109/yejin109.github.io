@@ -32,6 +32,15 @@ title: "About Me"
 4. Recommendation System
 5. Anything that could solve problem in scalable way!
 
+# (Recently) Study Topics
+(see Category page!)
+
+1. MIT 6.006 : Introduction to Algorithm
+2. MIT 18.100A : Real Analysis
+
+--- --- 
+
+
 # Contact
 
 - email: ay0119@yonsei.ac.kr
