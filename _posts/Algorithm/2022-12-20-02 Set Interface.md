@@ -28,5 +28,20 @@ Set Interface should support following operations
 
 ![제목](/assets/images/Algorithm/2-1.PNG){: width="70%" height="55%"}{: .align-center}
 
+## (Unordered) Array
+
+Searching which is find(k) is $O(n)$ in the case of $k$ is located at the last index!
+
+For dynamic operations, which is insert/delete function, it is amortized $O(n)$
+
+## Sorted Array
+
+This array is build being organized by key
+- "organizing"(or sorting) takes $O(n\log(n))$!
+- Once we build it, other operations are much faster.
+
+Searching operation is $O(\log(n))$ by binary search!
+- find(k) and find_prev/find_next time complexity is same.
+
 
 
