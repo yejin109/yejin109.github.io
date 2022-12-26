@@ -18,7 +18,7 @@ This contents is based on Lecture of [link](https://ocw.mit.edu/courses/6-006-in
 
 Sequence Interface should support following operations
 
-![제목](/assets/images/Algorithm/1-0.PNG){: width="70%" height="55%"}{: .align-center}
+![제목](/assets/images/algorithm/1-0.PNG){: width="70%" height="55%"}{: .align-center}
 
 ## Properites
 
@@ -30,7 +30,7 @@ Sequence Interface should support following operations
 
 # Data Structure
 
-![제목](/assets/images/Algorithm/1-1.PNG){: width="70%" height="55%"}{: .align-center}
+![제목](/assets/images/algorithm/1-1.PNG){: width="70%" height="55%"}{: .align-center}
 
 ## (Static) Array Sequence
 
