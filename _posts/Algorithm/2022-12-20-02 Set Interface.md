@@ -16,6 +16,7 @@ Basically, set interface has following properties.
 
 - Each item has a unique key
 - This is a dictionary @ Python.
+- $u$ means the size of numbers(or largest key!)
 
 # Operations
 
