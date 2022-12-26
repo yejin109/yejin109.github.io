@@ -21,12 +21,12 @@ Basically, set interface has following properties.
 
 Set Interface should support following operations
 
-![제목](/assets/images/Algorithm/2-0.PNG){: width="70%" height="55%"}{: .align-center}
+![제목](/assets/images/algorithm/2-0.PNG){: width="70%" height="55%"}{: .align-center}
 
 
 # Data Structure
 
-![제목](/assets/images/Algorithm/2-1.PNG){: width="70%" height="55%"}{: .align-center}
+![제목](/assets/images/algorithm/2-1.PNG){: width="70%" height="55%"}{: .align-center}
 
 ## (Unordered) Array
 
