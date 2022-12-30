@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Summary] 09 Algorithm and Data Structure : Graph Problems"
+title: "[Lecture Summary] 11 Algorithm and Data Structure : Graph Problems"
 toc: true
 toc_sticky: true
 toc_lable: "Main Contents"
@@ -69,11 +69,31 @@ Output : distance $\delta(s,t)$ and shortest path in G
 
 ## Single Soursce Shortest Paths
 
-Input : Graph, source node $s$<br>
-Output : distances for all $v \in V$ and shortest path tree which contains shortest path from $s$ to every $v \in V$<br>
+Input : Graph, source node $s$
+
+Output : <br>
+distances for all $v \in V$ and shortest path tree(or parent pointer) which contains shortest path from $s$ to every $v \in V$ <br>
+
 Algorithm : 
 
 ![제목](/assets/images/algorithm/9-0.PNG){: width="70%" height="55%"}{: .align-center}
 
+### Shortest Path Tree
+For weighted graph, algorithm return only parent pointer of $v$ with finite distance from source vertex $s$ as result of shortest path tree.
+
+Input : Graph
+
+Output : Parent pointer
+
+Algorithm: <br>
+- Initialize empty parent pointer data structure P 
+- Set P(s) = None
+- For each vertex $u$ whose distance is finite
+  - For each $v \in Adj^+(u)$
+    - If P($v$) is empty, $P(v) \gets u$, $\delta(s,v)=\delta(s,u) + w(u,v)$
+
+The thing is that we can compute parent pointers afterwards, so all we need to compute is distance in the algorithm
+
+## All Pairs Shortest Paths(APSP)
 
 
