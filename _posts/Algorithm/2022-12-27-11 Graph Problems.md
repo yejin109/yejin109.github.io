@@ -94,6 +94,14 @@ Algorithm: <br>
 
 The thing is that we can compute parent pointers afterwards, so all we need to compute is distance in the algorithm
 
+### Simple Shortest Paths
+
+We say **simple** shortest paths when graph does not contain negative weight cycles! It implies that there does not exist any vertex which is visited more than once. 
+
+If distance from $s$ to $v$, there exists a shortest path to $v$ that is simple.
+
+Finite shortest paths contain at most $\mid V \mid - 1$ edges. This works as upper bound! SO simple paths constraint in runtime analysis.
+
 ## All Pairs Shortest Paths(APSP)
 
 
