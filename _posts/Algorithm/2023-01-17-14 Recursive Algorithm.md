@@ -52,10 +52,12 @@ It is useful for optimization problems! It gradually.
 All we need to do is SRTBOT! Once we formulate subproblems as a graph and their dependency as an edge in that graph, we can solve original problems just the way DFS works.
 
 - **S** : Subproblem definition
-  - Approach : Prefix($x[:i]$)/suffix($x[i:]$)/substring($x[i:j]$) 
+  - Approach : Prefix($x[:i]$)/suffix($x[i:]$)/substring($x[i:j]$)
+  - except substring, other approaches take linear time!
 - **R** : Relate subproblems recursively
   - When it comes to relate them, define a recursive equation!
 - **T** : Topological order on subproblems
+  - Relation between subproblems are acyclic. This implies that child node needs parents node to solve it.
 - **B** : Base case solution (First step of Induction)
 - **O** : Original problem solution via subproblems
 - **T** : Time analysis
@@ -63,6 +65,10 @@ All we need to do is SRTBOT! Once we formulate subproblems as a graph and their 
 
 Because we can solve subproblems(DAG) with Dynamic Programming, we can say that
 > Dynamic Programming = recursion + memorization
+
+cf)<br>
+subsequence : subset of sequence which is not necessarily continuous<br>
+substring : continuous range or interval of it<br>
 
 
 ## Memorization
