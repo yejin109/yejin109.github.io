@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Summary] 14 Algorithm and Data Structure : DP Subproblems"
+title: "[Lecture Summary] 15 Algorithm and Data Structure : DP Subproblems"
 toc: true
 toc_sticky: true
 toc_lable: "Main Contents"
