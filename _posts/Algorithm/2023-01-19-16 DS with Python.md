@@ -12,4 +12,6 @@ tags:
 
 This contents is based on Lecture of [link](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/syllabus/)
 
-#
+# Sequence
+
+[링크](https://github.com/yejin109/Data-Structure-and-Algorithm)
