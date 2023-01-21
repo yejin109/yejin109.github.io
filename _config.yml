@@ -100,7 +100,7 @@ author:
       url: mailto:yejinkim0119@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://yejin109.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -282,3 +282,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+recent_topics:
+  - Algorithm
+  - DevLog
