@@ -80,10 +80,53 @@ Runtime :  0.105023623s
 ==================================================
 ```
 
-
 See more details at :<br>
 Github : [source code](https://github.com/yejin109/Data-Structure-and-Algorithm/blob/main/utils/log.py)
 
 
-# Sequence
+# Interface: Sequence
+
+Operations to be used : <br>
+
+![API](/assets/images/algorithm/1-0.PNG){: width="70%" height="55%"}{: .align-center}
+
+## Array
+
+Some already know that there are "array" python package and all we need to implement is **Static** array. Because python offers Python list which is **dynamic** array and it is hard to handle index and allocation of memory, I used Python list to circumvent and this can degrade the performance of following performance
+
+Github : [source code](https://github.com/yejin109/Data-Structure-and-Algorithm/blob/main/structure/array.py)
+
+
+## Linked List
+
+To implement Linked List, we need node and node has **item** and **pointer** of next(child) node as attributes(features). So we can define Node class first and use it. 
+
+The thing is that I used "get at" operation for implementing other operations. This does affect the overall performance if I cannot properly implement "get at" operation. 
+
+For example,
+
+```
+...
+    def get_at(self, i):
+        pointer = self.head.next
+        for i_pointer in range(i):
+            next_node = ctypes.cast(pointer, ctypes.py_object).value
+            pointer = next_node.next
+        return ctypes.cast(pointer, ctypes.py_object).value
+...
+    def insert_at(self, i, x):
+        assert i >= 0, f"Wrong index : {i}"
+        if i > 0:
+            past_node = self.get_at(i-1)
+            next_node = self.get_at(i)
+            new_node = Node(x, id(next_node))
+            past_node.next = id(new_node)
+        else:
+            self.insert_first(x)
+```
+
+Because get_at operation of Linked List take linear time(it uses for-loop!), insert_at operation also takes linear time. On the other hand, if i improve performance of get_at, then it will enhance other operation either.
+
+
+Github : [source code](https://github.com/yejin109/Data-Structure-and-Algorithm/blob/main/structure/linked_list.py)
 
