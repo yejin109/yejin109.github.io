@@ -33,10 +33,9 @@ title: "About Me"
 5. Anything that could solve problem in scalable way!
 
 # (Recently) Study Topics
-(see Category page!)
 
 1. MIT 6.006 : Introduction to Algorithm
-2. MIT 18.100A : Real Analysis
+2. [In Progress]MIT 18.100A : Real Analysis
 
 --- --- 
 
