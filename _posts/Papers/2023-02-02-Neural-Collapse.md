@@ -51,10 +51,10 @@ $x\in\mathbb{R}^d$ : Input <br>
 $h:\mathbb{R}^d\to\mathbb{R}^p$ : Classifier <br>
 $h_{i,c}$ : activation for $i$th data in $c$th class <br>
 $\mu_{G}=Avg_{i,c} \lbrace h_{i,c} \rbrace \in \mathbb{R}^p$ : Global mean<br>
-$\mu_c=Ave_{i}\lbrace h_{i,c}\rbrace \in \mathbb{R}^p$ : class means<br>
- $\Sigma_T = Ave_{i,c}\lbrace (h_{i,c}-\mu_G)(h_{i,c}-\mu_G)^T \rbrace \in \mathbb{R}^p \times \mathbb{R}^p$ : total covariance<br>
-$\Sigma_B = Ave_{i,c}\lbrace (\mu_{c}-\mu_G)(\mu_{c}-\mu_G)^T \rbrace \in \mathbb{R}^p \times \mathbb{R}^p$ : between class covariance<br>
-$\Sigma_W = Ave_{i,c}\lbrace (h_{i,c}-\mu_G)(h_{i,c}-\mu_G)^T \rbrace \in \mathbb{R}^p \times \mathbb{R}^p$: within class covariance <br>
+$\mu_c=Avg_{i}\lbrace h_{i,c}\rbrace \in \mathbb{R}^p$ : class means<br>
+ $\Sigma_T = Avg_{i,c}\lbrace (h_{i,c}-\mu_G)(h_{i,c}-\mu_G)^T \rbrace \in \mathbb{R}^p \times \mathbb{R}^p$ : total covariance<br>
+$\Sigma_B = Avg_{i,c}\lbrace (\mu_{c}-\mu_G)(\mu_{c}-\mu_G)^T \rbrace \in \mathbb{R}^p \times \mathbb{R}^p$ : between class covariance<br>
+$\Sigma_W = Avg_{i,c}\lbrace (h_{i,c}-\mu_G)(h_{i,c}-\mu_G)^T \rbrace \in \mathbb{R}^p \times \mathbb{R}^p$: within class covariance <br>
 $M = [\mu_c - \mu_G]$<br>
 $\dagger$ : Moore-Penrose pseudoinverse
 
