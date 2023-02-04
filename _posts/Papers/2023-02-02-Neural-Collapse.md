@@ -105,3 +105,12 @@ In my opinion, the reason why cross entropy loss design has that inductive bias 
 Softmax layer is commonly used for models used in this paper and the results are used to calculate Cross Entropy loss. When it comes to minimize the loss value, softmax values are also updated so that model enhance the softmax value of true label(class) and lower that of false label. Moreover, softmax value uses dot product which is naturally correlated with cosine similarity. As a result, classifier for the true label is updated to enhance the cosine similarity value. This implies that classifier and input features are aligned with each other which achieve smaller angular distance!
 
 ---
+
+# Further research
+
+See pepers below here:
+- [The implicit bias of gradient descent on separable data](https://www.jmlr.org/papers/volume19/18-188/18-188.pdf)
+- [The Optimised Internal Representation of Multilayer Classifier Networks Performs Nonlinear Discriminant Analysis](https://www.sciencedirect.com/science/article/abs/pii/089360809090019H)
+
+Explanation of the author [X.Y. Han](https://xyhan.me/) from Operations Research and Information Engineering, Cornel
+- [Video link](https://vimeo.com/751017447)
