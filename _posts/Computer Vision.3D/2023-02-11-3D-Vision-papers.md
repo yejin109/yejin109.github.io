@@ -5,9 +5,9 @@ toc_sticky: true
 toc_lable: "Main Contents"
 use_math: true
 categories:
-  - 3D vision
+  - Computer Vision
 tags:
-  - [Computer Vision]
+  - [3D vision]
 ---
 
 # Shape representation
