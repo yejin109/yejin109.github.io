@@ -3,7 +3,7 @@ title: "[Lecture Note] MySQL 06. Table Structure"
 toc: true
 use_math: true
 categories:
-  - RDBMS
+  - Study
 tags:
   - [MySQL]
 ---

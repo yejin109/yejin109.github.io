@@ -3,9 +3,9 @@ title: "[Lecture Note] 객체지향 프로그래밍 - 15 오버라이딩과 다�
 toc: true
 use_math: true
 categories:
-  - OOP
+  - Study
 tags:
-  - [JAVA]
+  - [OOP, JAVA]
 ---
 
 객체지향프로그래밍 입문 [강의](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9E%85%EB%AC%B8/dashboard)의 강의 내용을 참고하여 정리한 글입니다.

@@ -5,7 +5,7 @@ toc_sticky: true
 toc_lable: "Main Contents"
 use_math: true
 categories:
-  - Algorithm
+  - Study
 tags:
   - [Algorithm, DataStructure]
 ---

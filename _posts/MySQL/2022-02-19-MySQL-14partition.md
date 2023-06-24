@@ -4,7 +4,7 @@ toc: true
 toc_sticky: true
 use_math: true
 categories:
-  - RDBMS
+  - Study
 tags:
   - [MySQL]
 ---

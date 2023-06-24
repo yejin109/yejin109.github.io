@@ -3,7 +3,7 @@ title: "[Lecture Note] MySQL 08. Stored Program"
 toc: true
 use_math: true
 categories:
-  - RDBMS
+  - Study
 tags:
   - [MySQL]
 ---

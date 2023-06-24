@@ -3,7 +3,7 @@ title: "[Lecture Note] MySQL 04. Function"
 toc: true
 use_math: true
 categories:
-  - RDBMS
+  - Study
 tags:
   - [MySQL]
 ---

@@ -3,7 +3,7 @@ title: "[Lecture Note] MySQL 09.Cursor"
 toc: true
 use_math: true
 categories:
-  - RDBMS
+  - Study
 tags:
   - [MySQL]
 ---

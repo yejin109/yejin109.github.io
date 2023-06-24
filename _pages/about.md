@@ -1,18 +1,21 @@
 ---
 permalink: /about/
-title: "About Me"
+title: ""
 ---
 
 ---
 
 # Education
 
-1. [Mar 2022-present]B.S. of Astronomy
-2. [Mar 2022-present]B.S. of Applied Statistics and Data Science
+1. [Mar 2017-June 2023]B.S. of Astronomy
+2. [Mar 2019-June 2023]B.S. of Applied Statistics and Data Science
+
+Also, you can see my personal study archive at [<a href="https://yejin109.notion.site/70b58984c7b640ddb53aff11a334392d?v=3ae80a7e89324a41b4c52d606234c7bd&pvs=4">Notion</a>]
+
 
 # Research Experiences 
 
-1. [July 2022-present] Vocational Training Program Intern @ SAP Labs Korea
+1. [July 2022-June 2023] Vocational Training Program Intern @ SAP Labs Korea
 2. [July 2021-June 2022] Undergraduate Research Participants(URP), MIDaS Laboratory @ Yonsei University
 
 # TA Experiences
@@ -25,17 +28,13 @@ title: "About Me"
 
 # Project Topics 
 
-0. Data-driven Query Optimization
+0. Data-driven Query Optimization, Neurocard
 1. [CV] Object Detection
 2. [NLP] Text Style Transfer
 3. Federated Learning
 4. Recommendation System
 5. Anything that could solve problem in scalable way!
 
-# (Recently) Study Topics
-
-1. MIT 6.006 : Introduction to Algorithm
-2. [In Progress]MIT 18.100A : Real Analysis
 
 --- --- 
 

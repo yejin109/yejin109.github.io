@@ -3,7 +3,7 @@ title: "[Lecture Note] MySQL 07. Stored Procedure"
 toc: true
 use_math: true
 categories:
-  - RDBMS
+  - Study
 tags:
   - [MySQL]
 ---

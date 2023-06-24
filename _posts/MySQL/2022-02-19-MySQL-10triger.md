@@ -3,7 +3,7 @@ title: "[Lecture Note] MySQL 10. Triger"
 toc: true
 use_math: true
 categories:
-  - RDBMS
+  - Study
 tags:
   - [MySQL]
 ---
