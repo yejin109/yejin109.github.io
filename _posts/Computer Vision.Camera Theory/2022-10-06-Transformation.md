@@ -7,7 +7,7 @@ use_math: true
 categories:
   - Computer Vision
 tags:
-  - [Computer Vision]
+  - [Camera Theory]
 ---
 
 # Motivation
