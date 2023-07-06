@@ -15,6 +15,9 @@ tags:
 원문은 [링크](https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html)에서 확인할 수 있습니다.
 
 
+[Notion Link](https://yejin109.notion.site/Denoising-Diffusion-Probabilistic-Models-243cbf83069c4a31bb31a6b5294bb60f?pvs=4)
+
+<!-- 
 Reference
 
 [Link 1](https://learnopencv.com/denoising-diffusion-probabilistic-models/#What-Are-Diffusion-Probabilistic-Models?--)
@@ -24,16 +27,14 @@ Reference
 > A diffusion probabilistic model (which we will call a “diffusion model” for brevity) is a **parameterized Markov chain** trained using **variational inference** to produce samples matching the data after finite time.
 > 
 
-> … learned to **reverse a diffusion process**,$q(\mathrm{x}_t|\mathrm{x}_{t-1})$ which is a Markov chain that gradually **adds noise** to the data **in the opposite direction** of sampling until signal is destroyed.
-> 
-> 
+>… learned to **reverse a diffusion process**,$q(\mathrm{x_{t}} \mid \mathrm{x_{t-1}})$ which is a Markov chain that gradually **adds noise** to the data **in the opposite direction** of sampling until signal is destroyed.
 > ![Untitled](/assets/images/generative/Untitled.png){: width="50%" height="40%"}{: .align-center}
 > 
 
 > When the diffusion consists of small amounts of Gaussian noise, it is sufficient to set the sampling chain transitions to conditional Gaussians too, allowing for a particularly simple neural network parameterization.
 > 
 
-![Untitled](/assets/images/generative//Untitled%201.png)
+![Untitled](/assets/images/generative//Untitled%201.png){: width="50%" height="40%"}{: .align-center}
 
 # Background
 
@@ -56,31 +57,30 @@ Reference
 
 ### Single Step
 
-![Untitled](/assets/images/generative/Untitled%202.png)
+![Untitled](/assets/images/generative/Untitled%202.png){: width="50%" height="40%"}{: .align-center}
 
-diffusion process는 $q(\mathrm{x}_{t}| \mathrm{x}_{t-1})$로 보게 된다.
+diffusion process는 $q(\mathrm{x_{t}} \mid \mathrm{x_{t-1}})$로 보게 된다.
 
-- Forward diffusion kernel(process): $q(\mathrm{x}_{t}| \mathrm{x}_{t-1})$
+- Forward diffusion kernel(process): $q(\mathrm{x_{t}} \mid \mathrm{x_{t-1}})$
     - 결과적으로 원래 이미지에서 점차 Gaussian noise가 누적되어서 곱해진 형태가 된다는 것
     - 그리고 이것은 neural net paramterized가 아닌게 그냥 Gaussian Noise가 그렇게 누적해서 곱해진 형태로 계산하면 된다.
     - 특히 variance가 diagonal해서 isotropic Gaussian이라고도 불린다.
     - **[***]** 중요한 것은 여기서 noise가 정의된 것을 Normal distribution의 성질을 이용해서 다음과 같이 정의할 수 있다. 이는 kernel의 정의를 decompose해보면 알 수 있다.
         
-        > $x_t = \sqrt{1-\beta_t} x_{t-1} + \sqrt{\beta_t}\epsilon, \epsilon \sim \mathcal{N}(0,I)$
-        > 
+        > $x_{t} = \sqrt{1-\beta_t} x_{t-1} + \sqrt{\beta_t}\epsilon, \epsilon \sim \mathcal{N}(0,I)$
 
 ### Full Step
 
 그리고 diffusion rate가 충분히 작을 때엔 결국 두 transition probability는 동일한 functional form을 가지게 되어서 forward process는 다음과 같이 closed form으로 정의된다고 한다.
 
-![Untitled](/assets/images/generative/Untitled%203.png)
+![Untitled](/assets/images/generative/Untitled%203.png){: width="50%" height="40%"}{: .align-center}
 
 - $\alpha_t := 1-\beta_t$
-- $\bar{\alpha}_t := \prod_{s=1}^t \alpha_s$,
+- $\bar{\alpha_{t}} := \prod^{t}_{s=1} \alpha_s$
 - 여기서 closed form의 의미는 Markov process를 반복해서 얻을 결과를 미리 계산해서 가질 수 있다는 것이다.
 - [***] 그리고 앞서 transition equation을 full step이 지난 이 시점에서 Closed form으로 작성하면 다음과 같다.
     
-    > $x_t = \sqrt{\bar{\alpha}_t} x_{0} + \sqrt{1-\bar{\alpha}_t}\epsilon$
+    > $x_{t} = \sqrt{\bar{\alpha}_t} x_{0} + \sqrt{1-\bar{\alpha_t}}\epsilon$
     > 
 
 ## Reverse process
@@ -99,23 +99,23 @@ diffusion process는 $q(\mathrm{x}_{t}| \mathrm{x}_{t-1})$로 보게 된다.
 
 ### Single Step
 
-![Untitled](/assets/images/generative/Untitled%204.png)
+![Untitled](/assets/images/generative/Untitled%204.png){: width="50%" height="40%"}{: .align-center}
 
-reverse process 는 $p(\mathrm{x}_{t-1}| \mathrm{x}_{t})$로 볼 수 있게 된다. 
+reverse process 는 $p(\mathrm{x_{t-1}} \mid \mathrm{x_{t}})$로 볼 수 있게 된다. 
 
-- Reverse diffusion kernel(process) : $p(\mathrm{x}_{t-1}| \mathrm{x}_{t})$
+- Reverse diffusion kernel(process) : $p(\mathrm{x_{t-1}} \mid \mathrm{x_{t}})$
     - 특히 이는 neural net으로 parameterization이 된다는 것을 기억하자!
     - 여기서 parameter들이 어떻게 계산되는지는 아래의 proposal을 보도록 하자.
 - **[***]** 다만 여기서 transition equation은 다음과 같이 정의된다.
     
-    > $\bar{x}_{t-1} = \mu_\theta(x_t,t) + \sqrt{\Sigma_\theta(x_t,t)}\epsilon$
+    > $\bar{x_{t-1}} = \mu_{\theta}(x_t,t) + \sqrt{\Sigma_{\theta}(x_t,t)}\epsilon$
     > 
 
 ### Loss
 
 기본적으로 Maximization of Log Likliehood를 하려고 한다. 그리고 VAE와 같이 lower bound를 maximization(descent algorithm에서는 upper bound를 minimization)하는 방식으로 loss function을 정의하게 된다. 
 
-![Untitled](/assets/images/generative/Untitled%205.png)
+![Untitled](/assets/images/generative/Untitled%205.png){: width="50%" height="40%"}{: .align-center}
 
 그리고 equivalent한 Loss function를 다음과 같이 정의할 수 있게 된다.
 
@@ -128,22 +128,22 @@ reverse process 는 $p(\mathrm{x}_{t-1}| \mathrm{x}_{t})$로 볼 수 있게 된�
 - 초기 상태의 loss는 실험적으로 더 좋은 결과를 얻었다고 한다.
 - Derivation
     
-    ![Untitled](/assets/images/generative/Untitled%207.png)
+    ![Untitled](/assets/images/generative/Untitled%207.png){: width="50%" height="40%"}{: .align-center}
     
     사실 위의 식은 계산상으로는 가능하지만   해석을 위해서 이와 같은 식의 전개를 사용할 수 있게 된다. 
     
-    ![Untitled](/assets/images/generative/Untitled%208.png)
+    ![Untitled](/assets/images/generative/Untitled%208.png){: width="50%" height="40%"}{: .align-center}
     
 
 이 때 tractability는 다음 정의로 보장된다고 한다. 
 
-![Untitled](/assets/images/generative/Untitled%209.png)
+![Untitled](/assets/images/generative/Untitled%209.png){: width="50%" height="40%"}{: .align-center}
 
 - 이건 아마 VAE와 같이 derive를 하면 구할 수 있을 것 같다.
 
 그리고 바로 사용하는 것이 아니라 구현하기에 쉽고 유용한 형태의 loss만을 사용하도록 한다.
 
-![Untitled](/assets/images/generative/Untitled%2010.png)
+![Untitled](/assets/images/generative/Untitled%2010.png){: width="50%" height="40%"}{: .align-center}
 
 - **[***]** 중요한 것은 이 loss를 다 사용하는 것이 아니라 유의미한 항만을 사용하도록 한다.
 - 이에 대한 유도는 아래의 Paramterization을 보도록 하자.
@@ -163,7 +163,7 @@ reverse process 는 $p(\mathrm{x}_{t-1}| \mathrm{x}_{t})$로 볼 수 있게 된�
 
 실제로 학습으로 계산할 것이 아니라 fixed constant로 사용하도록 한다. 
 
-![Untitled](/assets/images/generative/Untitled%2011.png)
+![Untitled](/assets/images/generative/Untitled%2011.png){: width="50%" height="40%"}{: .align-center}
 
 그리고 앞서 transition equation을 정의한 것을 이용해서 converge할 때 즉  Gaussian image가 만들어질 때까지 반복하도록 한다.
 
@@ -181,7 +181,7 @@ reverse process 는 $p(\mathrm{x}_{t-1}| \mathrm{x}_{t})$로 볼 수 있게 된�
 - $\mu_\theta$는 다음 과정을 바탕으로 정해지게 된다.
     - Details
         
-        ![Untitled](/assets/images/generative/Untitled%2012.png)
+        ![Untitled](/assets/images/generative/Untitled%2012.png){: width="50%" height="40%"}{: .align-center}
         
         - $\tilde{\mu}_t$ : forward process posterior mean(Loss section 확인해보기)
         
@@ -190,20 +190,21 @@ reverse process 는 $p(\mathrm{x}_{t-1}| \mathrm{x}_{t})$로 볼 수 있게 된�
         - $\mathrm{x}_t(\mathrm{x}_0,\epsilon) = \sqrt{\bar{\alpha}}\mathrm{x}_0 + \sqrt{1-\bar{\alpha}_t}\epsilon$
         - Equation 7
         
-        ![Untitled](/assets/images/generative/Untitled%2013.png)
+        ![Untitled](/assets/images/generative/Untitled%2013.png){: width="50%" height="40%"}{: .align-center}
         
         - 기존의 식은 $D_{KL}(q(\mathrm{x}_{t-1}| \mathrm{x}_t, \mathrm{x}_0)\Vert p_\theta(\mathrm{x}_{t-1}|\mathrm{x}_t))$.
         - 이 때 $p_\theta(\mathrm{x}_{t-1}|\mathrm{t}) = \mathcal{N} (\mathrm{x}_{t-1}; \mu_\theta(\mathrm{x}_t,t),\sigma_t^2\mathrm{I})$.
         - 여기서 covariance term을 지우기 위해서 위에서 그냥 실험적으로 $\sigma_t^2$를 정한 것
         
-        ![Untitled](/assets/images/generative/Untitled%2014.png)
+        ![Untitled](/assets/images/generative/Untitled%2014.png){: width="50%" height="40%"}{: .align-center}
         
         - 이 때 Full step의 transition equation을 사용 : $x_t = \sqrt{\bar{\alpha}_t} x_{0} + \sqrt{1-\bar{\alpha}_t}\epsilon$
+
         - 그리고 posterior mean에 대한 식 사용 : $\tilde{\mu}_t (\mathrm{x}_t,\mathrm{x}_0) := {\sqrt{\bar{\alpha}_{t-1}}\beta_t \over 1-\bar{\alpha}_{t}}\mathrm{x}_0 + {\sqrt{\bar{\alpha}_{t}}(1-\bar{\alpha}_{t-1})\over 1-\bar{\alpha}_{t}}\mathrm{x}_t$
         
         결과적으로 $L_{t-1}$은 다음과 같이 정리된다.
         
-        ![Untitled](/assets/images/generative/Untitled%2015.png)
+        ![Untitled](/assets/images/generative/Untitled%2015.png){: width="50%" height="40%"}{: .align-center}
         
         - 여기서 주목할 점은 원래 posterior mean에 대한 식에서 noise에 대한 식으로 바뀌게 된다는 것이다.
 
@@ -211,4 +212,4 @@ reverse process 는 $p(\mathrm{x}_{t-1}| \mathrm{x}_{t})$로 볼 수 있게 된�
 
 우리가 해야하는 것은 결국 reverse process를 따라서 원래의 이미지로 돌아가야 한다. 결과적으로  다음 알고리즘으로 추론하게 된다.
 
-![Untitled](/assets/images/generative/Untitled%2016.png)
+![Untitled](/assets/images/generative/Untitled%2016.png){: width="50%" height="40%"}{: .align-center} -->
