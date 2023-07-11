@@ -1,5 +1,5 @@
 ---
-title: "[Lecture Summary] 00 Real Anaysis : TOC"
+title: "[Lecture Summary] 01 Measure Theory : Measurability"
 toc: true
 toc_sticky: true
 toc_lable: "Main Contents"
