@@ -28,3 +28,20 @@ This contents is based on Lecture of MATH 813 of IIT Bombay[(link)](https://www.
     - Lebesgue Integral
     - Radon-Nikodym theorem
   - [Notion Link](https://yejin109.notion.site/MA-813-Measure-Theory-Lecture-2-Abstract-Axiomatic-version-of-Lebesgue-integral-340d6ae307274077bd7ea25cc071389a?pvs=4)
+- Lecture 3 : MCT, DCT
+  - Contents
+    - Monotonic Convergence Theorem
+    - Fatous' Lemma
+    - Absolutely Continuous Measures
+    - $L^1$ space
+    - Dominated Convergence theorem
+  - [Notion Link](https://yejin109.notion.site/MA-813-Measure-Theory-Lecture-3-MCT-DCT-edb2b17f9ac94ec6b0eff95678264fdd?pvs=4)
+- Lecture 4 : Measure zero
+  - Contents
+    - Almost Everywhere
+    - Completion
+    - Corollary of DCT
+    - Avergage measure on finite space
+    - Borel-Cantelli Lemma
+  - [Notion Link](https://yejin109.notion.site/MA-813-Measure-Theory-Lecture-4-Measure-Zero-2501c1c99c10491389debb87f61528b6?pvs=4)
+
