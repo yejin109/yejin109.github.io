@@ -45,3 +45,9 @@ This contents is based on Lecture of MATH 813 of IIT Bombay[(link)](https://www.
     - Borel-Cantelli Lemma
   - [Notion Link](https://yejin109.notion.site/MA-813-Measure-Theory-Lecture-4-Measure-Zero-2501c1c99c10491389debb87f61528b6?pvs=4)
 
+- Lecture 5: Key concepts from Topology
+  - Contents
+    - Compact space, Locally compact
+    - Hausdorff and Uryshon's Lemma
+    - Semi-continuous
+    - [Notion Link](https://yejin109.notion.site/Topology-86079d1d92444510a972f2bd66aa0f48?pvs=4)
