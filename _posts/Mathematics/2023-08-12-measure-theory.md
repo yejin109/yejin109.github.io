@@ -51,3 +51,7 @@ This contents is based on Lecture of MATH 813 of IIT Bombay[(link)](https://www.
     - Hausdorff and Uryshon's Lemma
     - Semi-continuous
     - [Notion Link](https://yejin109.notion.site/Topology-86079d1d92444510a972f2bd66aa0f48?pvs=4)
+-  Lecture 6~10 : RRT Proof
+  - Contents
+    - Preliminary [Notion Link](https://yejin109.notion.site/Riesz-Representation-Theorem-Preliminary-f8c141e8892c42828fe0a60d1d485670?pvs=4)
+    - Stepwise proof [Notion Link](https://yejin109.notion.site/Riesz-Representation-Theorem-Step-wise-proof-f2ded312de0c46b4bf7be3c9926ebd9c?pvs=4)
