@@ -7,7 +7,7 @@ use_math: true
 categories:
   - NLP
 tags:
-  - [Masked Language Model]
+  - [LLM, CoT]
 ---
 
 This is a review of "Graph of Thoughts: Solving Elaborate Problems with Large Language Models"
