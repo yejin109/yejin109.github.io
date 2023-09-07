@@ -1,5 +1,5 @@
 ---
-title: "[Paper] Beyond Chain-of-Thought, Effective Graph-of-Thought Reasoning in Large Language Models"
+title: "[Paper] Memorization Without Overfitting: Analyzing the Training Dynamics of Large Language Models"
 toc: false
 toc_sticky: false
 toc_lable: "Main Contents"
@@ -7,10 +7,10 @@ use_math: true
 categories:
   - NLP
 tags:
-  - [LLM, CoT]
+  - [LLM]
 ---
 
-This is a review of "Beyond Chain-of-Thought, Effective Graph-of-Thought Reasoning in Large Language Models"
+This is a review of "Memorization Without Overfitting: Analyzing the Training Dynamics of Large Language Models"
 
 
-- Paper Review post [Notion Link](https://yejin109.notion.site/Beyond-Chain-of-Thought-Effective-Graph-of-Thought-Reasoning-in-Large-Language-Models-e0e223e934824a75b7a0a0f4f6750fd3?pvs=4)
+- Paper Review post [Notion Link](https://yejin109.notion.site/Memorization-Without-Overfitting-Analyzing-the-Training-Dynamics-of-Large-Language-Models-d6087a8180d242e49a271692a2aac850?pvs=4)
