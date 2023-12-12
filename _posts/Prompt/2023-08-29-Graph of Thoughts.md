@@ -5,9 +5,9 @@ toc_sticky: false
 toc_lable: "Main Contents"
 use_math: true
 categories:
-  - NLP
+  - Prompt
 tags:
-  - [LLM, CoT]
+  - [CoT]
 ---
 
 This is a review of "Graph of Thoughts: Solving Elaborate Problems with Large Language Models"
