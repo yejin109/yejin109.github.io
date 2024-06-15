@@ -18,6 +18,8 @@ Also, you can see my personal study archive at [<a href="https://yejin109.notion
 
 # Research Experiences 
 
+[Jan 2024 - Feb 2024] Research Intern @ Linq
+
 [July 2022-June 2023] Vocational Training Program Intern @ SAP Labs Korea
 
 [July 2021-June 2022] Undergraduate Research Participants(URP), MIDaS Laboratory @ Yonsei Univ.
