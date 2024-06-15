@@ -55,5 +55,5 @@ Also, you can see my personal study archive at [<a href="https://yejin109.notion
 
 # Contact
 
-- email: ay0119@yonsei.ac.kr
+- email: yjkim.stat@yonsei.ac.kr
 
