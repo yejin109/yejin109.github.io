@@ -1,7 +1,7 @@
 ---
 title: "[LLM-RL] Lecture 1: MDP, Objective, Value Functions, and Imitation Learning"
-toc : true
-use_math : true
+toc: true
+use_math: true
 categories:
 - LLM-RL
 tags:
@@ -136,5 +136,3 @@ learn $\pi_\theta(a\mid s)$ via supervised learning.
 - 📄 **MDP 정리 블로그 2**  
   <https://untitledtblog.tistory.com/139>
 - 📑 **이영운 교수님 강의안** (첨부파일 참고)
-
-
