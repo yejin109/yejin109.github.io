@@ -3,10 +3,10 @@ title: "[LLM-RL] Lecture 1: MDP, Objective, Value Functions, and Imitation Learn
 toc : true
 use_math : true
 categories:
-	- LLM-RL
+- LLM-RL
 tags:
-	- Large Language Model
-	- Reinforcement Learning
+- Large Language Model
+- - Reinforcement Learning
 ---
 
 **Overview.** This post builds from the **MDP framework** to the **RL objective** and **value functions**, then contrasts pure RL with **Imitation Learning** (IL), focusing on **Behavior Cloning (BC)** and **DAgger**. The dependency chain is  
