@@ -1,5 +1,5 @@
 ---
-title: "[LLM-RL] Lecture 1: MDP, Objective, Value Functions, and Imitation Learning (BC & DAgger)"
+title: "[LLM-RL] Lecture 1: MDP, Objective, Value Functions, and Imitation Learning"
 toc : true
 use_math : true
 categories:
@@ -9,13 +9,8 @@ tags:
 	- Reinforcement Learning
 ---
 
-> **Overview.** This post builds from the **MDP framework** to the **RL objective** and **value functions**, then contrasts pure RL with **Imitation Learning** (IL), focusing on **Behavior Cloning (BC)** and **DAgger**. The dependency chain is  
-> **MDP → RL Objective → Value/Action-Value → Imitation Learning (BC, DAgger)**.
-
-* TOC
-{:toc}
-
-> **Math rendering note:** Equations are written with standard MathJax delimiters (`$...$` for inline and `$$...$$` for display). Make sure your Jekyll is using **kramdown** with **MathJax** enabled (commonly set in `_config.yml`). If your theme doesn't auto-load MathJax, see the snippet at the end of this post.
+**Overview.** This post builds from the **MDP framework** to the **RL objective** and **value functions**, then contrasts pure RL with **Imitation Learning** (IL), focusing on **Behavior Cloning (BC)** and **DAgger**. The dependency chain is  
+- **MDP → RL Objective → Value/Action-Value → Imitation Learning (BC, DAgger)**.
 
 ---
 
